@@ -1,0 +1,28 @@
+Granita - Minimalist granular synth
+-----------------------------------------
+Lorenzo Sutton <lsutton@libero.it> - 2009, 2010
+
+Granita is a minimalist granular synthesis patch for working on a recorded audio file or on a live-fed (optionally looped) array. A simple loop-recorder can be used to feed the main array live.
+
+I initially made this patch because in need of a simple and straightforward granular tool for personal use wanted to experiment on granulation and Pd. It was heavily inspired by 'Microsound' by Curtis Roads (MIT Press - 2002) - http://mitpress.mit.edu/catalog/item/default.asp?tid=8587&ttype=2. Eventually I decided to tidy it up and share it, so I guess it should be considered a working beta, but I have no precise plans for further development as for the moment it pretty much works for me. I do add/change/update stuff every now and then. Anyone is welcome to improve/modify anyway.
+
+Granita is minimal in that it doesn't include additional effects and the controls are pretty straightforward:
+- open the main patch (Granita.pd (alternatively Granita64.pd or Granita32.pd for 32 an 64 voices)
+- A typical Pd gui will come up (on Windows be patient, takes much longer than on Linux! :|)
+- open a wave file or record something with the (loop) recorder 
+- *turn up* the main volume and the dac (on the right) :)
+- *tuern on* granulation (Yellow trigger indicated with "main")
+- start playing with the controls
+
+Of course you can also route the main patch sends (called [s~ granitaL] and [s~ granitaR]) in any other patch or effect with two simple [r~ granitaL] and [r~ granitaR] (in this case consider muting the main volume).
+This means Granita may or may not work for your granular needs...
+
+Granular synthesis is usually quite resource demanding. Granita is no exception (you have been warned!): the main patch, granita.pd, comes with 128 grain polyphony per channel. This can be particularly CPU hungry depending on the system but should work on fairly 'modern' systems which usually handle audio (as said above performance seems better on linux though). Two 'lighter' yet decreasingly less effective versions are provided: Granita64.pd and Granita32.pd which have a polyphony of respectively 64 and 32 and thus cut CPU usage to roughly 1/2 and 1/4. Experimentation will prove which is best to use and finding the good quality/performance ratio depending on one's needs.
+
+Some not-so-efficient 'pitch shifting' an 'time-stretching' can be done when while playing the grains along the file pointer. These are mostly intended as granular effects are no way replacement for [you cool pitch shifting/time stretching app].
+
+Granita needs PD Extended. It was tested on PD Extended for Linux and Windows. Some custom patches are included in the package.
+
+Feedback welcome and happy granulation ;)
+
+Curiosity: 'Granita' in Italy is a summer drink made of crushed ice with syrup in many flavours it is very refreshing and is made of many 'grains' of ice! I love the mint and tamarind flavours.
