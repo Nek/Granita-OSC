@@ -1,13 +1,13 @@
-#N canvas 352 280 747 378 10;
+#N canvas 348 268 747 378 10;
 #X obj -1 -213 envelopechoser envelopeArray;
-#N canvas 776 183 495 307 fileArray 0;
-#X obj -37 193 hsl 400 20 0 163071 0 0 empty empty empty -2 -8 0 10
+#N canvas 765 360 495 307 fileArray 0;
+#X obj -37 193 hsl 400 20 0 240000 0 0 empty empty empty -2 -8 0 10
 -262130 -4034 -1 0 1;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array fileArray 163071 float 2;
-#X coords 0 1 163071 -1 405 250 1;
+#X array fileArray 240000 float 2;
+#X coords 0 1 240000 -1 405 250 1;
 #X restore -40 -58 graph;
-#X obj -37 193 hsl 400 10 0 163071 0 0 empty empty empty -2 -8 0 10
+#X obj -37 193 hsl 400 10 0 240000 0 0 empty empty empty -2 -8 0 10
 -262130 -258113 -1 0 1;
 #X obj -117 209 r rangeMin;
 #X obj -117 189 r rangeMax;
@@ -33,7 +33,7 @@
 #X obj 652 -226 r envLenght;
 #X obj 176 -213 s envLenght;
 #X obj 2 -55 s maxSamples;
-#N canvas 299 188 477 444 controls 1;
+#N canvas 301 83 477 444 controls 1;
 #X obj 207 284 outlet listL;
 #X obj 289 284 outlet listR;
 #X obj -92 282 outlet panL;
@@ -49,7 +49,7 @@
 #X obj 289 -142 *~ 0.2;
 #X obj 351 -143 *~ 0.2;
 #X obj 509 -199 128grain~ fileArray envelopeArray;
-#N canvas 11 436 293 188 envelopeArray 0;
+#N canvas 1 344 293 188 envelopeArray 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array envelopeArray 256 float 4;
 #X coords 0 1 255 -1 220 160 1;
@@ -76,7 +76,7 @@
 -262144 -1 -1 1 1;
 #X msg 486 -234 \; pd-controls vis \$1;
 #X obj 486 -278 loadbang;
-#N canvas 794 554 451 223 liveRecorder 0;
+#N canvas 778 84 451 223 liveRecorder 0;
 #X obj 199 79 tgl 15 0 empty empty loop_on/off 17 7 0 10 -262130 -1
 -1 0 1;
 #X obj 231 96 tgl 15 0 empty empty dry_on/off 17 7 0 10 -261682 -1
@@ -98,8 +98,8 @@ patch sending the signal to a [throw~ loopRec];
 #X text 71 35 from adc~;
 #X text 192 158 time;
 #X obj 262 154 spigot;
-#X obj 262 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
+#X obj 262 179 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-4034 -1;
 #X floatatom 313 178 5 0 0 0 - - -;
 #X obj 308 154 > 1;
 #X obj 135 134 loopRecord fileArray 5;
