@@ -1,3 +1,11 @@
+2012-02-12
+---------------
+- Removed cyclone/prepend dependency. Replaced with list append
+
+2012-02-11
+---------------
+- Added smooth edges to live loop recorder
+
 1.0
 ---------------
 - Made explicit call to motex/pan~ and cyclone/prepend. This makes Granita more

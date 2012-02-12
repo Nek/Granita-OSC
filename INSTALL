@@ -1,6 +1,6 @@
-Granita requires Pd Extended or Pd Vanilla with motex and cyclone libraries
-and all the patches in the provided directory (except for the wav files
-provided for testing)
+Granita requires Pd Vanilla with motex library
+and all the patches in the provided directory (except of course the audio files
+provided for testing and the screenshot)
 
 Extract the directory to some location and open Granita.pd (alternatively
 Granita64.pd or Granita32.pd)
