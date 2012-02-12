@@ -1,5 +1,7 @@
 2012-02-12
 ---------------
+- Granita is now pure Pd Vanilla.
+- Removed motex/pan~ dependency. Replaced with self-made equal pan.
 - Removed cyclone/prepend dependency. Replaced with list append
 
 2012-02-11

@@ -45,7 +45,7 @@ playing the grains along the file pointer. These are mostly intended as
 granular effects are no way replacement for [you cool pitch shifting/time
 stretching app].
 
-Granita needs Pd Vanilla with the motex library.
+Granita works with Pd Vanilla.
 It was tested on Pd for Linux and Windows (less). Some custom patches are
 included in the package.
 
