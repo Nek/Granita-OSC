@@ -1,3 +1,10 @@
+Granita's granular synth controllable with OSC.
+
+See accompanying overtone's project:
+https://github.com/Nek/Overtone-Granita-OSC
+
+Below is the original Granita's README:
+
 Granita - Minimalist granular synth
 -----------------------------------
 Lorenzo Sutton <lorenzofsutton[theemailthing]gmail.com> - 2009 - 2012
