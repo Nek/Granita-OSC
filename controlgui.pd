@@ -1,4 +1,4 @@
-#N canvas 3 69 1008 692 10;
+#N canvas 242 210 1008 692 10;
 #X obj 190 265 cnv 15 72 84 empty empty empty 20 12 0 14 -159539 -66577
 0;
 #X obj 361 171 cnv 15 90 197 empty empty empty 20 12 0 14 -162280 -66577
@@ -22,14 +22,14 @@
 #X obj 5 3 cnv 20 350 50 empty empty empty 20 12 0 14 -261682 -66577
 0;
 #X obj 343 438 randrange 0 0;
-#X obj 14 21 hsl 256 12 0 68117 0 0 rangeMin rangeMin empty -2 -8 0
-10 -262144 -1 -1 0 1;
-#X obj 274 20 nbx 8 14 0 68117 0 0 rangeMin rangeMin empty 0 -8 0 10
--1 -4034 -128992 0 256;
-#X obj 14 38 hsl 256 12 0 68117 0 0 rangeMax rangeMax empty -2 -8 0
-10 -262144 -1 -1 22500 1;
-#X obj 274 36 nbx 8 14 0 68117 0 0 rangeMax rangeMax empty 0 -8 0 10
--1 -4034 -128992 60103.2 256;
+#X obj 14 21 hsl 256 12 0 743516 0 0 rangeMin rangeMin empty -2 -8
+0 10 -262144 -1 -1 2550 1;
+#X obj 274 20 nbx 8 14 0 743516 0 0 rangeMin rangeMin empty 0 -8 0
+10 -1 -4034 -128992 74351.6 256;
+#X obj 14 38 hsl 256 12 0 743516 0 0 rangeMax rangeMax empty -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 274 36 nbx 8 14 0 743516 0 0 rangeMax rangeMax empty 0 -8 0
+10 -1 -4034 -128992 0 256;
 #X obj 473 14 spigot;
 #X obj 274 5 tgl 12 0 empty empty link 17 7 0 10 -262144 -1 -1 1 1
 ;
@@ -40,9 +40,9 @@
 #X obj 275 75 nbx 5 14 0.1 1000 0 0 speedCtrlMin speedCtrlMin empty
 0 -8 0 10 -1 -4034 -128992 10 256;
 #X obj 13 94 hsl 256 12 0.1 1000 0 0 speedCtrlMax speedCtrlMax empty
--2 -8 0 10 -262144 -1 -1 1452 1;
+-2 -8 0 10 -262144 -1 -1 252 1;
 #X obj 276 93 nbx 5 14 0.1 1000 0 0 speedCtrlMax speedCtrlMax empty
-0 -8 0 10 -1 -4034 -128992 57.0355 256;
+0 -8 0 10 -1 -4034 -128992 10 256;
 #X obj 570 44 spigot;
 #X obj 275 61 tgl 12 0 empty empty link 17 7 0 10 -262144 -1 -1 1 1
 ;
@@ -51,9 +51,9 @@
 #X obj 273 132 nbx 5 14 1 200 0 0 durCtrlMin durCtrlMin empty 0 -8
 0 10 -1 -4034 -128992 10 256;
 #X obj 12 151 hsl 256 12 1 200 0 0 durCtrlMax durCtrlMax empty -2 -8
-0 10 -262144 -1 -1 4953 1;
+0 10 -262144 -1 -1 1153 1;
 #X obj 273 150 nbx 5 14 1 200 0 0 durCtrlMax durCtrlMax empty 0 -8
-0 10 -1 -4034 -128992 39.6528 256;
+0 10 -1 -4034 -128992 10 256;
 #X obj 461 147 spigot;
 #X obj 273 118 tgl 12 0 empty empty link 17 7 0 10 -262144 -1 -1 1
 1;
@@ -121,7 +121,7 @@
 1;
 #X msg 761 -163 \; pd dsp \$1;
 #X obj 79 281 vradio 15 1 0 4 empty empty empty -10 -8 0 10 -228856
--1 -1 1;
+-1 -1 0;
 #X text 99 280 triangle;
 #X text 97 294 gaussian;
 #X text 97 310 trapezoid;
@@ -133,12 +133,12 @@
 #X obj -84 290 r lb;
 #X msg -82 341 2;
 #X msg 98 398 \; pd-envelopeArray vis \$1;
-#X obj 103 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 103 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 368 93 bng 22 250 50 0 empty empty load_file 25 10 1 10 -262130
 -1 -1;
 #X obj 255 374 s loadFile;
-#X obj 282 268 tgl 18 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 282 268 tgl 18 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 507 258 \; pd-fileArray vis \$1;
 #X obj 256 394 s filePlay;
@@ -207,7 +207,7 @@
 #X msg 485 107 1;
 #X obj 486 79 r lb;
 #X msg 511 296 \; pd-liveRecorder vis \$1;
-#X obj 368 124 tgl 18 0 empty empty empty 17 7 0 10 -204800 -1 -1 1
+#X obj 368 124 tgl 18 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
 1;
 #X text 13 57 Speed (ms: 0.1 - 1000);
 #X obj 847 53 r speedCtrlMax;
@@ -252,7 +252,7 @@
 #X text 369 1 DSP;
 #X obj 6 352 cnv 15 352 16 empty empty empty 2 8 0 8 -66577 -66577
 0;
-#X obj 7 353 cnv 15 350 14 empty statusCanvas1 /home/lo/Documents/pd/granita/granita.1.0/voice48.wav
+#X obj 7 353 cnv 15 350 14 empty statusCanvas1 /Users/Nek/Music Making/moloko.aif
 2 8 0 8 -233017 -66577 0;
 #X text 123 266 see env.;
 #X text 228 330 speed;
@@ -265,7 +265,7 @@
 #X obj 631 185 s pitchCtrlMax;
 #X obj 584 118 s mainVol;
 #X floatatom 793 491 10 0 0 0 - - -;
-#X obj 357 -23 s rangeMin;
+#X obj 344 -19 s rangeMin;
 #X obj 615 -60 * 1;
 #X obj 604 235 s mainVol;
 #X obj 227 5 bng 12 250 50 0 empty empty all 17 7 0 8 -260097 -1 -1
@@ -275,6 +275,12 @@
 #X obj 76 -57 s rangeMin;
 #X msg 79 -83 0;
 #X obj 179 -48 r resetRange;
+#X obj 315 -226 *;
+#X obj 256 -264 r pos-start;
+#X obj 336 -205 s rangeMin;
+#X obj 494 -226 *;
+#X obj 435 -264 r pos-end;
+#X obj 515 -205 s rangeMax;
 #X connect 8 0 10 0;
 #X connect 8 0 73 0;
 #X connect 9 0 8 0;
@@ -315,6 +321,8 @@
 #X connect 42 0 62 0;
 #X connect 42 0 131 1;
 #X connect 42 0 209 1;
+#X connect 42 0 214 1;
+#X connect 42 0 217 1;
 #X connect 43 0 13 0;
 #X connect 43 0 15 0;
 #X connect 43 0 14 0;
@@ -459,4 +467,12 @@
 #X connect 212 0 211 0;
 #X connect 213 0 208 0;
 #X connect 213 0 181 0;
+#X connect 214 0 14 0;
+#X connect 214 0 13 0;
+#X connect 214 0 216 0;
+#X connect 215 0 214 0;
+#X connect 217 0 219 0;
+#X connect 217 0 16 0;
+#X connect 217 0 15 0;
+#X connect 218 0 217 0;
 #X coords 0 -1 1 1 456 370 2 0 0;
