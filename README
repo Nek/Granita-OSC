@@ -1,4 +1,5 @@
 Granita's granular synth controllable with OSC.
+All OSC related code is isolated inside receive-osc.pd
 
 See accompanying overtone's project:
 https://github.com/Nek/Overtone-Granita-OSC
